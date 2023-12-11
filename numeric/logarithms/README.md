@@ -1,7 +1,7 @@
 
 # Logarithms
 
-The logarithm is a function with multiple useful properties. It is defined as the function such that $k^{log_k(x)}=x$. For most applications, we do not care what k is. The most common choices for $k$ are $10$ or $e$. In most programming languages, the function "$log$" refers to $log_e$.
+The logarithm is a function with multiple useful properties. It is defined as the function such that $k^{log_k(x)}=x$. For most applications, we do not care what k is. The most common choices for $k$ are $10$ or $e$. In most programming languages, the function $log$ refers to $log_e$.
 
 # Number of digits
 
@@ -35,6 +35,7 @@ Why does this work? One way to think of logarithms is that we transform our numb
 
 Additional problems: 
 [Associative exponents](https://open.kattis.com/problems/associativeexponents)
+
 [Fleecing the raffle](https://open.kattis.com/problems/raffle)
 
 # A note on precision
@@ -58,7 +59,9 @@ In other words, by replacing each edge weight $e$ with $-log(e)$, our problem is
 
 Additional problems:
 [Closing the borders](https://open.kattis.com/problems/closingtheborders)
+
 [Exponentially fun problem](https://open.kattis.com/problems/exponentiallyfun)
+
 [Bond](https://open.kattis.com/problems/bond)  (Hint: [hungarian algorithm](https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/WeightedMatching.h))
 
 # Large averages
@@ -71,4 +74,5 @@ If the terms in the numerator and the denominator have some nice form, such as b
 
 Problems:
 [Kolkrabbaleikarnir](https://open.kattis.com/problems/kolkrabbaleikarnir)
+
 Last carrot (to be added)

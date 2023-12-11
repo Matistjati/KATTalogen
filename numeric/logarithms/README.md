@@ -75,7 +75,7 @@ Problems: \
 Last carrot (to be added)
 
 # Logarithm-like function
-In some problems, you need to work with exponentially large integers, but using logarithms will be too imprecise. Then you might want to consider the following function: $f(n)=$ the powers in the prime factorization of $n$. For example, $f(36)=2^2*3^2$
+In some problems, you need to work with exponentially large integers, but using logarithms will be too imprecise. Then you might want to consider the following function: $f(n)=$ the powers in the prime factorization of $n$. For example, $f(36)=2^2*3^2$ \
 f satisfies all the following identities:
 1. $f(a*b)=f(a)+f(b)$
 2. $f(\frac{a}{b})=f(a)-f(b)$

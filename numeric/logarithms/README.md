@@ -70,6 +70,5 @@ $\frac{a+b+c+\cdots}{k}=\frac{a}{k}+\frac{b}{k}+\frac{c}{k}+\dots=e^{log(a-k)}+e
 If the terms in the numerator and the denominator have some nice form, such as being binomial coefficients or powers, this approach might work.
 
 Problems: \
-[Kolkrabbaleikarnir](https://open.kattis.com/problems/kolkrabbaleikarnir)
-
+[Kolkrabbaleikarnir](https://open.kattis.com/problems/kolkrabbaleikarnir) \
 Last carrot (to be added)

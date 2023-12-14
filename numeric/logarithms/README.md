@@ -11,7 +11,7 @@ If we use C++, our numbers will be too large to be stored in any basic type and 
 
 It might seem like we will run into the same problem of overflow as before. It turns out that $log(x)$ has two properties that make this a reasonable computation:
 1. $log(x)$ grows very slowly. For example, $log_{10}(10^{10})=10$, and $log_{10}(10^6!) \approx 10^7$
-2. $log(a \cdot b)=log(a)+log(b)$. This allows us to compute $log(n!)$ in $O(1)$ if we know the value of $log((n-1)!)$, as $log(n!)=log((n-1)!)+log(n))$
+2. $log(a \cdot b)=log(a)+log(b)$. This allows us to compute $log(n!)$ in $O(1)$ if we know the value of $log((n-1)!)$, as $log(n!)=log((n-1)!)+log(n)$
 
 Additional problems: \
 [Beautiful primes](https://open.kattis.com/problems/beautifulprimes)

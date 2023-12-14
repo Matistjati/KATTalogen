@@ -49,7 +49,7 @@ Consider the directed graph where each item is a node and the possible trades ar
 
 Using the Bellman Ford algorithm to find the cycle of greatest product would work. However, as before, our intermediary values might become exponentially small or large. To solve this, we will instead change each edge weight.
 
-Let $e_1,e_2, \dots e_n$ be the weights of some cycle. We will make the following transformation:
+Let $e_1,e_2, \dots e_n$ be the weights of some cycle. We will make the following transformation:\
 $e_1 \cdot e_2 \dots \cdot e_n \geq 1 \iff$ \
 $log(e_1 \cdot e_2 \dots \cdot e_n) \geq log(1) \iff$ \
 $log(e_1) + log(e_2) \dots + log(e_n)) \geq 0 \iff$ \

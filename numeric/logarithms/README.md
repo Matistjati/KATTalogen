@@ -83,7 +83,7 @@ f satisfies all the following identities:
 2. $f(\frac{a}{b})=f(a)-f(b)$
 3. $f(a^b)=b\cdot f(a)$ (where $b$ is an integer) 
 
-Om $f(a*b)=f(a)+f(b)$, addition of $f(a)=2^2*3^2$ and $f(b)=2^3*5^1$ is defined as adding powers: $f(a)+f(b)=2^5*3^2*5^1$.
+In $f(a \cdot b)=f(a)+f(b)$, addition of $f(a)=2^2*3^2$ and $f(b)=2^3*5^1$ is defined as adding powers: $f(a)+f(b)=2^5*3^2*5^1$.
 
 Problems: \
 [Divisors](https://open.kattis.com/problems/divisors)

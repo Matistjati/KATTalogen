@@ -47,12 +47,12 @@ Often times, using your language's equivalent of double will suffice. If not, tr
 Problem 3: [Villager trading](https://open.kattis.com/problems/villagertrading) \
 Consider the directed graph where each item is a node and the possible trades are the edges. Each edge will have a weight, being the ratio between the two items in the trade. If we can find a cycle in this graph, whose product of edge lengths is $>1$, and there is a path from the cycle to a trade giving us emeralds, the answer is yes. Otherwise, no.
 
-Using the Bellman Ford algorithm to find the cycle of greatest product would work. However, as before, our intermediary values might become exponentially small or large. To solve this, we will instead change each edge weight. Let $e_1,e_2,\dots, e_n$ be the edge weights in a cycle.
+Using the Bellman Ford algorithm to find the cycle of greatest product would work. However, as before, our intermediary values might become exponentially small or large. To solve this, we will instead change each edge weight.
 
-Our problem thus such weights that satisfy
-$e_1 \cdot e_2 \dots \cdot e_n \geq 1 \iff$
-$log(e_1 \cdot e_2 \dots \cdot e_n) \geq log(1) \iff$
-$log(e_1) + log(e_2) \dots + log(e_n)) \geq 0 \iff$ 
+Let $e_1,e_2, \dots e_n$ be the weights of some cycle. We will make the following transformation:
+$e_1 \cdot e_2 \dots \cdot e_n \geq 1 \iff$ \
+$log(e_1 \cdot e_2 \dots \cdot e_n) \geq log(1) \iff$ \
+$log(e_1) + log(e_2) \dots + log(e_n)) \geq 0 \iff$ \
 $-log(e_1) - log(e_2) \dots - log(e_n)) \leq 0$ 
 
 In other words, by replacing each edge weight $e$ with $-log(e)$, our problem is the standard problem of finding a negative cycle. We also need to be able to quickly check whether there exists a path from a node in a negative cycle to the emerald. To do this, we reverse all edges and precompute all the nodes reachable from the emerald (these are the nodes that can reach the emerald).

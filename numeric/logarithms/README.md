@@ -28,11 +28,12 @@ As the approximation is very good, $\frac{n!}{S(n)}$ will be pretty small. Howev
 
 We can thus do the following manipulations:
 $$log(\frac{n!}{S(n)})=log(n!)-log(S(n))$$
-$log(n!)=log(n)+log(n-1)+\dots+log(1)$
+$log(n!)=log(n)+log(n-1)+\dots+log(1)$ 
+
 $log(S(n))=log(\sqrt{2\pi n})+log(n^n)-log(e^n)=$
 $log(\sqrt{2\pi n})+nlog(n)-nlog(e)$
 
-Why does this work? One way to think of logarithms is that we transform our numbers into a form that can express the magnitude and the first numbers of exponentially large numbers. The precision loss primarily occurs in less significant digits, instead of our representation of the exponent. 
+Why does this work? One way to think of logarithms is that we transform our numbers into a form that can express the magnitude and the first digits of exponentially large numbers. The precision loss primarily occurs in less significant digits, instead of our representation of the exponent. 
 
 Additional problems: \
 [Associative exponents](https://open.kattis.com/problems/associativeexponents) \
@@ -49,13 +50,14 @@ Consider the directed graph where each item is a node and the possible trades ar
 
 Using the Bellman Ford algorithm to find the cycle of greatest product would work. However, as before, our intermediary values might become exponentially small or large. To solve this, we will instead change each edge weight.
 
-Let $e_1,e_2, \dots e_n$ be the weights of some cycle. We will make the following transformation:\
-$e_1 \cdot e_2 \dots \cdot e_n \geq 1 \iff$ \
-$log(e_1 \cdot e_2 \dots \cdot e_n) \geq log(1) \iff$ \
-$log(e_1) + log(e_2) \dots + log(e_n)) \geq 0 \iff$ \
-$-log(e_1) - log(e_2) \dots - log(e_n)) \leq 0$ 
+Let $e_1,e_2, \dots e_n$ be the weights of some cycle. We will make the following transformation:
 
-In other words, by replacing each edge weight $e$ with $-log(e)$, our problem is the standard problem of finding a negative cycle. We also need to be able to quickly check whether there exists a path from a node in a negative cycle to the emerald. To do this, we reverse all edges and precompute all the nodes reachable from the emerald (these are the nodes that can reach the emerald).
+$e_1 \cdot e_2 \cdot \dotsc \cdot e_n > 1 \iff$ \
+$log(e_1 \cdot e_2 \cdot \dotsc \cdot e_n) > log(1) \iff$ \
+$log(e_1) + log(e_2) + \dots + log(e_n) < 0 \iff$ \
+$-log(e_1) - log(e_2) - \dots - log(e_n) < 0$ 
+
+In other words, by replacing each edge weight $e$ with $-log(e)$, our problem is the standard problem of finding a negative cycle. We also need to be able to quickly check whether there exists a path from a node in a negative cycle to the emerald. To do this, we reverse all edges and do a DFS from the emerald node. All nodes reachable by this DFS can reach the emerald in the original graph.
 
 Additional problems: \
 [Closing the borders](https://open.kattis.com/problems/closingtheborders) \
@@ -65,23 +67,23 @@ Additional problems: \
 # Large averages
 In problems asking us for a probability, it is not uncommon that our answer will be in the form $\frac{a+b+c+\cdots}{k}$. If both the numerator and denominator are exponentially large, it might be difficult to compute this, even if the value of the fraction has a reasonable value. 
 
-We will instead compute 
-$\frac{a+b+c+\cdots}{k}=\frac{a}{k}+\frac{b}{k}+\frac{c}{k}+\dots=e^{log(a-k)}+e^{log(b-k)}+e^{log(c-k)}+\cdots$
+We will instead compute \
+$\frac{a+b+c+\cdots}{k}=\frac{a}{k}+\frac{b}{k}+\frac{c}{k}+\dots=e^{log(a)-log(k)}+e^{log(b)-log(k)}+e^{log(c)-log(k)}+\cdots$
 
-If the terms in the numerator and the denominator have some nice form, such as being binomial coefficients or powers, this approach might work.
+For this to work, the terms in the numerator and the denominator usually must have some nice form. One common variant is that the numerators are binomial coefficients and the denominator is an exponential.
 
 Problems: \
 [Kolkrabbaleikarnir](https://open.kattis.com/problems/kolkrabbaleikarnir) \
 Last carrot (to be added)
 
 # Logarithm-like function
-In some problems, you need to work with exponentially large integers, but using logarithms will be too imprecise. Then you might want to consider the following function: $f(n)=$ the powers in the prime factorization of $n$. For example, $f(36)=2^2*3^2$ \
+In some problems, you need to work with exponentially large integers, but using logarithms will be too imprecise. Then you might want to consider the following function: $f(n)=$ the powers in the prime factorization of $n$. For example, $f(36)=2^2*3^2$. \
 f satisfies all the following identities:
 1. $f(a*b)=f(a)+f(b)$
 2. $f(\frac{a}{b})=f(a)-f(b)$
 3. $f(a^b)=b\cdot f(a)$ (where $b$ is an integer) 
 
-Addition of $f(a)=2^2*3^2$ and $f(b)=2^3*5^1$ is defined as adding powers: $f(a)+f(b)=2^5*3^2*5^1$.
+Om $f(a*b)=f(a)+f(b)$, addition of $f(a)=2^2*3^2$ and $f(b)=2^3*5^1$ is defined as adding powers: $f(a)+f(b)=2^5*3^2*5^1$.
 
 Problems: \
 [Divisors](https://open.kattis.com/problems/divisors)

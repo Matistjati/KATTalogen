@@ -77,13 +77,13 @@ Problems: \
 Last carrot (to be added)
 
 # Logarithm-like function
-In some problems, you need to work with exponentially large integers, but using logarithms will be too imprecise. Then you might want to consider the following function: $f(n)=$ the powers in the prime factorization of $n$. For example, $f(36)=2^2*3^2$. \
+In some problems, you need to work with exponentially large integers, but using logarithms will be too imprecise. Then you might want to consider the following function: $f(n)=$ the powers in the prime factorization of $n$. For example, $f(36)=2^2 \cdot 3^2$. \
 f satisfies all the following identities:
-1. $f(a*b)=f(a)+f(b)$
+1. $f(a \cdot b)=f(a)+f(b)$
 2. $f(\frac{a}{b})=f(a)-f(b)$
 3. $f(a^b)=b\cdot f(a)$ (where $b$ is an integer) 
 
-In $f(a \cdot b)=f(a)+f(b)$, addition of $f(a)=2^2*3^2$ and $f(b)=2^3*5^1$ is defined as adding powers: $f(a)+f(b)=2^5*3^2*5^1$.
+In $f(a \cdot b)=f(a)+f(b)$, addition of $f(a)=2^2 \cdot 3^2$ and $f(b)=2^3 \cdot 5^1$ is defined as adding powers: $f(a)+f(b)=2^5 \cdot 3^2 \cdot 5^1$.
 
 Problems: \
 [Divisors](https://open.kattis.com/problems/divisors)

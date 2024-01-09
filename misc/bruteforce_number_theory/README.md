@@ -2,13 +2,15 @@
 Sometimes, algorithms run much faster than one would expect due to some quantity being unexpectedly small. Here is a non-comprehensive list of some of these.
 
 ## Divisors
-First off, let's bound the number of prime factors of a number. Obviously, the smaller the prime factors are, the more we can have. The smallest prime is $2$, thus a number of size $n$ can have at most $\approx \log_2(n)$ prime factors. Note that this is an upper bound.
+First off, some definitions. A number is a prime factor if it divides a given number and is a prime. A number is a divisor if divides a given number.
+
+Let's start by bounding the number of prime factors of a number. Obviously, the smaller the prime factors are, the more we can have. The smallest prime is $2$, thus a number of size $n$ can have at most $\approx \log_2(n)$ prime factors. This is an upper bound, and is usually smaller for most $n$ in practice.
 
 How might we then bound the number of divisors? A trivial bound is that we can either choose or not choose each prime factor, leading to $2^{\log_2(n)}=n$ divisors. This turns out to be a gross overestimate.
 
 Let $d(n)$ denote the number of divisors of n. Suppose that $n=p_1^{k_1}\cdot p_2^{k_2} \cdots p_n^{k_n}$. Then, $d(n)=(k_1+1)\cdot(k_2+1)\cdots(k_n+1)$. What we are interested in is $d_{max}(n)=max(d(1),d(2),\dots,d(n))$, i.e., the "most evil" number less than $n$. 
 
-It turns out that $d_{max}(n)=o(n^{\epsilon})$ for all $\epsilon > 0$, meaning that it essentially stops growing for sufficiently large $n$. In practice, our numbers are not sufficiently large. Thus, a good rule of thumb is
+It turns out that $d_{max}(n)=o(n^{\epsilon})$ for all $\epsilon > 0$, meaning that it essentially stops growing meaningfully for sufficiently large $n$. In practice, our numbers are not sufficiently large. Thus, a good rule of thumb is
 
 $$d_{max}(n)=n^{\frac{1}{3}}$$
 

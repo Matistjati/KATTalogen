@@ -8,7 +8,7 @@ How might we then bound the number of divisors? A trivial bound is that we can e
 
 Let $d(n)$ denote the number of divisors of n. Suppose that $n=p_1^{k_1}\cdot p_2^{k_2} \cdots p_n^{k_n}$. Then, $d(n)=(k_1+1)\cdot(k_2+1)\cdots(k_n+1)$. What we are interested in is $d_{max}(n)=max(d(1),d(2),\dots,d(n))$, i.e., the "most evil" number less than $n$. 
 
-It turns out that $d_{max}(n)=n^{o(1)}$, meaning that it is essentially linear for sufficiently large $n$. In practice, our numbers are not sufficiently large. Thus, a good rule of thumb is
+It turns out that $d_{max}(n)=o(n^{\epsilon})$ for all $\epsilon > 0$, meaning that it essentially stops growing for sufficiently large $n$. In practice, our numbers are not sufficiently large. Thus, a good rule of thumb is
 
 $$d_{max}(n)=n^{\frac{1}{3}}$$
 

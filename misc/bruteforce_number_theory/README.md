@@ -30,7 +30,7 @@ Problems using the fact that there are few divisors:\
 [Gcd and lcm](https://open.kattis.com/problems/gcdandlcm)\
 [Evening out 2](https://open.kattis.com/problems/eveningout2)\
 [Positive divisors](https://open.kattis.com/problems/positivedivisors)\
-[Inheritance](https://open.kattis.com/problems/inheritance)
+[Inheritance](https://open.kattis.com/problems/inheritance)\
 [List game 2](https://open.kattis.com/problems/listgame2)\
 [Gcd sum.](https://open.kattis.com/problems/gcdsum) (Hint: numbers such that $d_{max}(n)=d(n)$ are called highly composite numbers. These are super rare and are the worst case. The test data is weak, so you can get accepted by precomputing the answer for all highly composite numbers.)
 

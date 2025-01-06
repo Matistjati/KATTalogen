@@ -14,8 +14,8 @@ With heaps you can do the following:
 Python has a built-in library for Heaps/Priority queues. Simply run ```import heapq``` and use the functions
 
 - ```heapq.heapify(list)``` to make a list into a heap.
-- ```heapq.heappop(list)``` to pop the smallest element.
-- ```heapq.heappush(list)``` to add an element to the heap.
+- ```heapq.heappop(list)``` to pop the smallest element in the heap.
+- ```heapq.heappush(list, x)``` to add an element x to the heap.
 
 Read more about it here:
  https://docs.python.org/3/library/heapq.html
